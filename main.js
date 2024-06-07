@@ -152,7 +152,7 @@ triangleType(7,4,2);
 console.log("-------------");
 console.log("Exercise 15");
 const NumberArray3 = [9,2,3,1,6,7,8,4,3,2,7,6];
-let smollNum = NumberArray3;
+let smollNum = NumberArray3[0];
 
 function smollNumFinder(a,b) {
     if (a < b) {
@@ -166,3 +166,88 @@ for (let i = 1; i < NumberArray3.length; i++) {
     smollNumFinder(smollNum,NumberArray3[i]);
 }
 console.log(smollNum);
+
+//Exercise 16
+console.log("-------------");
+console.log("Exercise 16");
+let bigusNum = NumberArray3[0];
+
+function bigusNumFinder(a,b) {
+    if (a > b) {
+        bigusNum = a;
+    } else {
+        bigusNum = b;
+    };
+};
+
+for (let i = 1; i < NumberArray3.length; i++) {
+    smollNumFinder(bigusNum,NumberArray3[i]);
+}
+console.log(bigusNum);
+
+//Exercise 17
+console.log("-------------");
+console.log("Exercise 17");
+const indexArray = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
+const index = 6;
+
+function ArrayIndexFinderPrinter(AnArray,someIndex) {
+    console.log(AnArray[someIndex]);    
+};
+ArrayIndexFinderPrinter(indexArray,index);
+
+//Exercise 18
+console.log("-------------");
+console.log("Exercise 18");
+const myColor = ["Red", "Green", "White", "Black"];
+
+function ColourAdder(ColoursToAdd) {
+    let coloursMixed = ColoursToAdd[0] 
+    for (let i = 1; i < ColoursToAdd.length; i++) {
+        coloursMixed = coloursMixed + " " + ColoursToAdd[i];
+    }
+    return coloursMixed;
+}
+console.log(ColourAdder(myColor));
+
+
+//Exercise 19
+console.log("-------------");
+console.log("Exercise 19");
+const x = 32443;
+
+function NumbersReverser(UnReversedNum) {
+    let UnReversedStringNum = UnReversedNum + "";
+    let UnReversedArrayNum = UnReversedStringNum.split("");
+    let ReversedNum = "";
+    do {
+        ReversedNum = ReversedNum + UnReversedArrayNum.pop();
+    } while (UnReversedArrayNum.length > 0);
+    return ReversedNum;
+}
+
+console.log(NumbersReverser(x));
+
+//Exercise 20
+console.log("-------------");
+console.log("Exercise 20");
+const z = 'webmaster';
+
+function LetterSorter(needsSorting) {
+        let letterSorter3000 = needsSorting.split("");
+        let checker = 0;
+        do {
+            checker = 0;
+            for (i = 0; i < letterSorter3000.length - 1; i++) {
+                if (letterSorter3000[i] > letterSorter3000[i+1]) {
+                    let inbetween = letterSorter3000[i+1]
+                    letterSorter3000[i+1] = letterSorter3000[i];
+                    letterSorter3000[i] = inbetween;
+                    checker = 1;
+                }
+            }
+        } while (checker != 0)
+        return letterSorter3000;
+}
+
+console.log(LetterSorter(z));
