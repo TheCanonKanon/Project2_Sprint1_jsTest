@@ -95,3 +95,74 @@ for (let i = 0; i < NumberArray2.length; i++) {
     }
 }
 console.log(NumberArray2Sum);
+
+//Exercise 11
+console.log("-------------");
+console.log("Exercise 11");
+function additionNums() {
+    const additionNumsMulti = 2*6;
+    console.log(additionNumsMulti);
+}
+additionNums();
+
+//Exercise 12
+console.log("-------------");
+console.log("Exercise 12");
+function additionNums2() {
+    const additionNumsMulti2 = 34*283;
+    return additionNumsMulti2;    
+}
+console.log(additionNums2());
+
+//Exercise 13
+console.log("-------------");
+console.log("Exercise 13");
+let a = [12,4,2];
+let b = [1,54,3];
+
+function additionNums3(number1,number2) {
+    const additionNumsMulti3 = number1 * number2;
+    return additionNumsMulti3;
+}
+console.log(additionNums3(a[0],b[0]));
+console.log(additionNums3(a[1],b[1]));
+console.log(additionNums3(a[2],b[2]));
+
+//Exercise 14
+console.log("-------------");
+console.log("Exercise 14");
+function triangleType(a,b,c) {
+    if (a === b && b === c) {
+        console.log("Your triangle is a Equilateral");
+    } else if (a === b || b === c || a === c) {
+        console.log("Your triangle is a Isosceles");
+    } else if (a != b && b !=c && a != c) {
+        console.log("Your triangle is a Scalene");
+    } else {
+        console.log("The heck is that?")
+    }
+}
+triangleType(2,2,2);
+triangleType(2,3,2);
+triangleType(2,4,5);
+triangleType(1,2,2);
+triangleType(7,4,2);
+
+//Exercise 15
+console.log("-------------");
+console.log("Exercise 15");
+const NumberArray3 = [9,2,3,1,6,7,8,4,3,2,7,6];
+let smollNum = NumberArray3;
+
+function smollNumFinder(a,b) {
+    if (a < b) {
+        smollNum = a;
+    } else {
+        smollNum = b;
+    };
+};
+
+for (let i = 1; i < NumberArray3.length; i++) {
+    smollNumFinder(smollNum,NumberArray3[i]);
+}
+console.log(smollNum);
