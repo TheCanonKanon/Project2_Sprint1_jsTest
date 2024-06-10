@@ -1,3 +1,5 @@
+"use strict";
+
 //Exercise 1
 console.log("Exercise 1");
 const myName = "Robert";
@@ -240,7 +242,7 @@ function LetterSorter(needsSorting) {
             checker = 0;
             for (i = 0; i < letterSorter3000.length - 1; i++) {
                 if (letterSorter3000[i] > letterSorter3000[i+1]) {
-                    let inbetween = letterSorter3000[i+1]
+                    let inbetween = letterSorter3000[i+1];
                     letterSorter3000[i+1] = letterSorter3000[i];
                     letterSorter3000[i] = inbetween;
                     checker = 1;
@@ -251,3 +253,73 @@ function LetterSorter(needsSorting) {
 }
 
 console.log(LetterSorter(z));
+
+//Exercise 21
+console.log("-------------");
+console.log("Exercise 21");
+
+const y = "Web Development Tutorial";
+
+function longestBoyFinder(fightingForLong) {
+    const wordLongHolder = fightingForLong.split(" ");
+    let longestBoy = "";
+    for (i = 0; i < wordLongHolder.length; i++) {
+        if (longestBoy.length < wordLongHolder[i].length) {
+            longestBoy = wordLongHolder[i];
+        };
+    };
+    return longestBoy;
+};
+console.log(longestBoyFinder(y));
+
+//Exercise 22
+console.log("-------------");
+console.log("Exercise 22");
+
+const v = "JavaScript";
+
+function aEradicator(wordWordington) {
+    let wordWordingtonClean = "";
+    for (let x of wordWordington) {
+        if (x === "a" || x === "A") {
+            x = 1;
+        };
+        wordWordingtonClean += x;
+    };
+    return wordWordingtonClean;
+}
+console.log(aEradicator(v.split("")));
+
+//Exercise 23
+console.log("-------------");
+console.log("Exercise 23");
+
+const u = "prince of persia"
+
+function bigFirstLetter(notBigLetter) {
+    let solution = "";
+    for (let x of notBigLetter) {
+        solution += x.slice(0,1).toUpperCase();
+        solution += x.slice(1,x.length)
+        solution += " "
+    }
+    return solution.trim();
+}
+console.log(bigFirstLetter(u.split(" ")));
+
+//Exercise 24
+console.log("-------------");
+console.log("Exercise 24");
+
+const n = 30;
+
+function evenBeforeThis(endAllNum) {
+    let beforeNums = "";
+    for (let i = 1; i < endAllNum; i++) {
+        if (i % 2 === 0) {
+            beforeNums += i + ",";
+        }
+    }
+    return beforeNums.slice(0,beforeNums.length-1);
+}
+console.log(evenBeforeThis(n));
