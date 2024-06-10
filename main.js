@@ -315,7 +315,7 @@ const n = 30;
 
 function evenBeforeThis(endAllNum) {
     let beforeNums = "";
-    for (let i = 1; i < endAllNum; i++) {
+    for (let i = 1; i < endAllNum+1; i++) {
         if (i % 2 === 0) {
             beforeNums += i + ",";
         }
@@ -323,3 +323,60 @@ function evenBeforeThis(endAllNum) {
     return beforeNums.slice(0,beforeNums.length-1);
 }
 console.log(evenBeforeThis(n));
+
+//Exercise 25
+console.log("-------------");
+console.log("Exercise 25");
+
+const m = 3;
+const l = 33;
+
+function evenBetweenThese(startAllNum, endAllNum) {
+    let beforeNums = "";
+    for (let i = startAllNum; i < endAllNum+1; i++) {
+        if (i % 2 === 1) {
+            beforeNums += i + ",";
+        }
+    }
+    return beforeNums.slice(0,beforeNums.length-1);
+}
+console.log(evenBetweenThese(m,l));
+
+//Exercise 26
+console.log("-------------");
+console.log("Exercise 26");
+
+var arrayNums = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
+
+function doubleChecker(arrayNumNums) {
+    const doubles = [];
+    let counter = 0;
+    for (let x of arrayNumNums) {
+        counter = 0;
+        for (let y of arrayNumNums) {
+            if (x === y) {
+                counter++;
+            }
+        }
+        if (counter > 1) {
+            if(doubles.indexOf(x) === -1){
+                doubles.push(x);
+            }
+        }
+    }    
+    return doubles.toString();
+}
+console.log(doubleChecker(arrayNums));
+
+
+//Exercise 27
+console.log("-------------");
+console.log("Exercise 27");
+
+function myBandList() {
+
+};
+
+//Exercise 28
+console.log("-------------");
+console.log("Exercise 28");
