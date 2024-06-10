@@ -372,11 +372,42 @@ console.log(doubleChecker(arrayNums));
 //Exercise 27
 console.log("-------------");
 console.log("Exercise 27");
+const bandArray = ["Dire Straits", "Kansas", "Steely Dan"]
 
-function myBandList() {
-
+function myBandList(arrayofBands) {
+    for (let x of arrayofBands) {
+        const listering = document.createElement("li");
+        listering.innerHTML = x
+        const test = document.querySelector("#band-list");
+        test.appendChild(listering);
+    }    
 };
+myBandList(bandArray);
 
 //Exercise 28
 console.log("-------------");
 console.log("Exercise 28");
+const rowdyrows = 4;
+const collycolumns = 8;
+
+for (let x = 0; x < rowdyrows; x++) {
+    console.log(x+1);
+}
+
+function addMultTable(rows,cols) {
+    const headyHeader = document.querySelector("h2")
+    const tableCreator = document.createElement("table");
+    headyHeader.after(tableCreator)
+    for (let x = 0; x < rows; x++) {
+        const rowCreator = document.createElement("tr");
+        tableCreator.appendChild(rowCreator);
+        for (let y = 0; y < cols; y++) {
+            const columnCreator = document.createElement("td");
+            columnCreator.innerHTML = "x: " + x + ", y: " + y;
+            columnCreator.setAttribute("style", "border: 1px solid black;")
+            rowCreator.appendChild(columnCreator);
+        }
+    }
+
+}
+addMultTable(rowdyrows,collycolumns);
